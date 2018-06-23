@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:id="@+id/innrerv"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/profile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#bf0000"
+            android:elevation="2dp"
+            android:layout_marginTop="30dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profile"
+        android:textSize="18dp"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold"
+        android:id="@+id/name"
+        />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/ll2"
+            android:layout_below="@+id/name"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: "
+                android:layout_marginTop="3dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="3dp"
+        android:id="@+id/age"
+        android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/space"
+            android:layout_marginTop="3dp"
+
+            android:textSize="15dp"
+            android:text=" | "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="1dp"
+
+            android:id="@+id/gender"
+            android:textSize="15dp"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/point_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/ll2">
+
+
+        <RelativeLayout
+            android:layout_margin="6dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:text="Points in Account: "
+            android:id="@+id/la"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7b7854"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/la"
+            android:id="@+id/points"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+Add Points"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:focusable="false"
+                android:layout_marginTop="3dp"
+                android:textColor="#030cfd"
+                android:id="@+id/add_points"
+                android:layout_below="@id/points"
+                />
+
+
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Pictures"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/point_cv"
+            android:background="@drawable/buttonshape"
+            android:id="@+id/add_picture"
+            android:focusable="false"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_picture"
+        android:id="@+id/rv"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentBottom="true"/>
+
+<!--    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#02c4b2"
+        android:id="@+id/add_picture"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentRight="true" />-->
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+</RelativeLayout>
+</ScrollView>

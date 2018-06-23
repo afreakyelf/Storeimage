@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#02c4b2"
+    android:orientation="vertical"
+    tools:context=".login">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medication without hassle"
+        android:fontFamily="serif"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_marginBottom="60dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:text="Signin to continue.."/>
+    
+    <com.google.android.gms.common.SignInButton
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/signin">
+
+    </com.google.android.gms.common.SignInButton>
+
+</LinearLayout>
